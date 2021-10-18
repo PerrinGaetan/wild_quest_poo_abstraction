@@ -1,0 +1,15 @@
+{
+    "name": "ibanez2/quest_poo_part3_abstraction",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "PerrinGaetan",
+            "email": "perringaetandu31@gmail.com"
+        }
+    ],
+    "require": {}
+}
