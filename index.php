@@ -10,7 +10,7 @@ use src\Vehicule\Car;
 use src\Vehicule\Truck;
 
 
-$porsche = new Car("red", 4, "essence");
+$porsche = new Car("red", 4, "essence", true);
 $vtt = new Bicycle('yellow', 1);
 
 $routeDuSoleil = new MotorWay;
@@ -42,6 +42,19 @@ $jeanJaures->addVehicule($porsche);
 echo 'WildAirline vous souhaite un bon voyage.<br /><br />';
 
 
-
-
-
+echo $porsche->getParkBrake();
+$porsche->setParkBrake();
+var_dump($porsche->getParkBrake());
+// $porsche->setParkBrake();
+echo $porsche->getParkBrake();
+try {
+    $porsche->start();
+} catch(Exception $e) {
+    echo $e;
+    $porsche->setParkBrake();
+} finally {
+    echo "My car drive like a Donut <br />";
+}
+echo $porsche->getParkBrake();
+$porsche->setParkBrake();
+echo $porsche->getParkBrake();

@@ -1,6 +1,7 @@
 <?php
 namespace src\Vehicule;
 
+use Exception;
 
 class Car extends Vehicule
 {
@@ -12,11 +13,13 @@ class Car extends Vehicule
 
     private string $energy;
     private int $energyLevel;
+    private bool $hasPartBrake = true;
 
-    public function __construct(string $color, int $nbSeats, string $energy)
+    public function __construct(string $color, int $nbSeats, string $energy, bool $hasPartBrake)
     {
         parent::__construct($color, $nbSeats);
         $this->setEnergy($energy);
+        $this->hasPartBrake = $hasPartBrake;
     }
 
     public function getEnergy():string
@@ -41,5 +44,23 @@ class Car extends Vehicule
     public function setEnergyLevel(int $energyLevel):void
     {
         $this->energyLevel = $energyLevel;
+    }
+
+    public function setParkBrake():void
+    {
+        $this->hasPartBrake == true ? $this->hasPartBrake = false : $this->hasPartBrake = true;
+    }
+    public function getParkBrake():bool
+    {
+        return $this->hasPartBrake;
+    }
+
+    public function start():string
+    {
+        if ($this->hasPartBrake === true) {
+            throw new Exception("Frein enclenché");
+        } else {
+            return "Let's Go";
+        }
     }
 }

@@ -5,8 +5,8 @@ use src\Vehicule\Vehicule;
 
 final class ResidentialWay extends HighWay
 {
-    private int $nbLane = 2;
-    private int $maxSpeed = 50;
+    protected int $nbLane = 2;
+    protected int $maxSpeed = 50;
 
     public function addVehicule(object $Vehicule)
     {

@@ -5,8 +5,8 @@ use src\Vehicule\Bicycle;
 
 final class PedestrianWay extends HighWay
 {
-    private int $nbLane = 1;
-    private int $maxSpeed = 10;
+    protected int $nbLane = 1;
+    protected int $maxSpeed = 10;
 
     public function addVehicule(object $Vehicule)
     {
