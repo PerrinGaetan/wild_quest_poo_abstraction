@@ -1,7 +1,7 @@
 <?php
 namespace src\Vehicule;
 
-Class Bicycle extends Vehicule implements LightableInterface
+class Bicycle extends Vehicule implements LightableInterface
 {
     public function switchOn(): bool
     {

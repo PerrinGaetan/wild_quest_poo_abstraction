@@ -57,4 +57,9 @@ try {
 }
 echo $porsche->getParkBrake();
 $porsche->setParkBrake();
-echo $porsche->getParkBrake();
+echo $porsche->getParkBrake(). '<br />';
+echo '<br /><br />';
+
+echo "10km équivaut à : " . \src\Vehicule\Speedometer::convertKMInMiles(10) . "miles<br />";
+echo "10 miles équivaut à : " .  \src\Vehicule\Speedometer::convertMilesInKm(10) . "km". '<br />';
+echo "30km équivaut à : " . \src\Vehicule\Speedometer::convertKMInMiles(30) . "miles";
