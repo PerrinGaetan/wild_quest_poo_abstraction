@@ -3,8 +3,17 @@ namespace src\Vehicule;
 
 use Exception;
 
-class Car extends Vehicule
+class Car extends Vehicule implements LightableInterface
 {
+    public function switchOn(): bool
+    {
+        return true;
+    }
+    public function switchOff(): bool
+    {
+        return false;
+    }
+
     public const ALLOWED_ENERGIES = [
         'fuel',
         'essence',
